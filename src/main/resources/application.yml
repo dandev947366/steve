@@ -31,3 +31,10 @@ steve:
     ws-session-select-strategy: ${ws.session.select.strategy}
     auto-register-unknown-stations: ${auto.register.unknown.stations}
     charge-box-id-validation-regex: ${charge-box-id.validation.regex}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - prometheus
