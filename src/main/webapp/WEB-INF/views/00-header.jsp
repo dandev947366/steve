@@ -34,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/style.css">
     <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="${ctxPath}/static/css/jquery-ui-timepicker-addon.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="${ctxPath}/static/js/jquery-2.0.3.min.js" ></script>
     <script type="text/javascript" src="${ctxPath}/static/js/jquery-ui.min.js" ></script>
     <script type="text/javascript" src="${ctxPath}/static/js/jquery-ui-timepicker-addon.min.js" ></script>

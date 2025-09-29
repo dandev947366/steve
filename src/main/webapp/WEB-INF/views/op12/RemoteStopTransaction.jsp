@@ -41,5 +41,5 @@
 </div>
 <div class="op-content">
 	<%@ include file="../op-forms/RemoteStopTransactionForm.jsp" %>
-</div></div>
+</div></div></div></div></div>
 <%@ include file="../00-footer.jsp" %>

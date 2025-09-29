@@ -20,71 +20,134 @@
 --%>
 <%@ include file="00-header.jsp" %>
 <div class="content">
-<div class="tileWrapper">
-	<a class="tileRow1" href="${ctxPath}/manager/chargepoints">
-		Number of<br>Charge Points
-		<span class="base formatNumber">${stats.numChargeBoxes}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/ocppTags">
-		Number of<br>OCPP Tags
-		<span class="base formatNumber">${stats.numOcppTags}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/users">
-		Number of<br>Users
-		<span class="base formatNumber">${stats.numUsers}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/reservations">
-		Number of<br>Active Reservations
-		<span class="base formatNumber">${stats.numReservations}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/transactions">
-		Number of<br>Active Transactions
-		<span class="base formatNumber">${stats.numTransactions}</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/home/ocppJsonStatus">
-		Number of Connected<br>JSON Charge Points
-		<span class="baseTable">
-			<span class="baseRow">
-				<span class="baseCell">OCPP 1.2 :</span>
-				<span class="baseCell formatNumber">${stats.numOcpp12JChargeBoxes}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">OCPP 1.5 :</span>
-				<span class="baseCell formatNumber">${stats.numOcpp15JChargeBoxes}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">OCPP 1.6 :</span>
-				<span class="baseCell formatNumber">${stats.numOcpp16JChargeBoxes}</span>
-			</span>
-		</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/chargepoints">
-		Received Heartbeats
-		<span class="baseTable">
-			<span class="baseRow">
-				<span class="baseCell">Today :</span>
-				<span class="baseCell formatNumber">${stats.heartbeatToday}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">Yesterday :</span>
-				<span class="baseCell formatNumber">${stats.heartbeatYesterday}</span>
-			</span>
-			<span class="baseRow">
-				<span class="baseCell">Earlier :</span>
-				<span class="baseCell formatNumber">${stats.heartbeatEarlier}</span>
-			</span>
-		</span>
-	</a>
-	<a class="tileRow1" href="${ctxPath}/manager/home/connectorStatus">
-		Connector Status
-		<span class="baseTable">
-			<c:forEach items="${stats.statusCountMap}" var="it">
-				<span class="baseRow">
-					<span class="baseCell">${it.key} :</span>
-					<span class="baseCell formatNumber">${it.value}</span>
-				</span>
-			</c:forEach>
-		</span>
-	</a>
-</div></div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+            <div class="col">
+                <a href="${ctxPath}/manager/chargepoints" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-primary-subtle text-primary-emphasis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Charge Points</h5>
+                            <p class="card-text display-6 fw-bold">${stats.numChargeBoxes}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/ocppTags" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-success-subtle text-success-emphasis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">OCPP Tags</h5>
+                            <p class="card-text display-6 fw-bold">${stats.numOcppTags}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/users" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-info-subtle text-info-emphasis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Users</h5>
+                            <p class="card-text display-6 fw-bold">${stats.numUsers}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/reservations" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-warning-subtle text-warning-emphasis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Active Reservations</h5>
+                            <p class="card-text display-6 fw-bold">${stats.numReservations}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/transactions" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-danger-subtle text-danger-emphasis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Active Transactions</h5>
+                            <p class="card-text display-6 fw-bold">${stats.numTransactions}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/home/ocppJsonStatus" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-light-subtle text-dark-emphasis">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary text-center">Connected JSON Charge Points</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    OCPP 1.2
+                                    <span class="badge bg-primary rounded-pill">${stats.numOcpp12JChargeBoxes}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    OCPP 1.5
+                                    <span class="badge bg-primary rounded-pill">${stats.numOcpp15JChargeBoxes}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    OCPP 1.6
+                                    <span class="badge bg-primary rounded-pill">${stats.numOcpp16JChargeBoxes}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/chargepoints" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 bg-light-subtle text-dark-emphasis">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary text-center">Received Heartbeats</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Today
+                                    <span class="badge bg-primary rounded-pill">${stats.heartbeatToday}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Yesterday
+                                    <span class="badge bg-primary rounded-pill">${stats.heartbeatYesterday}</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Earlier
+                                    <span class="badge bg-primary rounded-pill">${stats.heartbeatEarlier}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col">
+                <a href="${ctxPath}/manager/home/connectorStatus" class="text-decoration-none">
+                    <div class="card h-100 shadow-sm border-0 text-dark-emphasis">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary text-center">Connector Status</h5>
+                            <ul class="list-group list-group-flush">
+                                <c:forEach items="${stats.statusCountMap}" var="it">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        ${it.key}
+                                        <span class="badge bg-primary rounded-pill">${it.value}</span>
+                                    </li>
+                                </c:forEach>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+       </div>
+    </div>
+</div>
 <%@ include file="00-footer.jsp" %>

@@ -48,5 +48,5 @@
 </div>
 <div class="op15-content">
     <%@ include file="../op-forms/SendLocalListForm.jsp" %>
-</div></div>
+</div></div></div></div></div>
 <%@ include file="../00-footer.jsp" %>

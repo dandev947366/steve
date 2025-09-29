@@ -43,5 +43,5 @@
 </div>
 <div class="op15-content">
     <%@ include file="../op-forms/ChangeAvailabilityForm.jsp" %>
-</div></div>
+</div></div></div></div></div>
 <%@ include file="../00-footer.jsp" %>

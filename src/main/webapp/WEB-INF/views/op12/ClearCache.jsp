@@ -36,5 +36,5 @@
 </div>
 <div class="op-content">
 	<%@ include file="../op-forms/ClearCacheForm.jsp" %>
-</div></div>
+</div></div></div></div></div>
 <%@ include file="../00-footer.jsp" %>

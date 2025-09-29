@@ -85,4 +85,7 @@
 
 </form:form>
 </div>
+       </div>
+    </div>
+</div>
 <%@ include file="00-footer.jsp" %>

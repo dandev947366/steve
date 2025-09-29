@@ -123,5 +123,5 @@
             <%@ include file="00-cp-misc.jsp" %>
 
     </form:form>
-</div></div>
+</div></div></div></div>
 <%@ include file="../00-footer.jsp" %>

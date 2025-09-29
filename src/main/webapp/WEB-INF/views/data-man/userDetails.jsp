@@ -49,5 +49,5 @@
         <%@ include file="00-user-ocpp.jsp" %>
 
     </form:form>
-</div></div>
+</div></div></div></div></div>
 <%@ include file="../00-footer.jsp" %>

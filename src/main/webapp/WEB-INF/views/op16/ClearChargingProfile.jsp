@@ -54,5 +54,5 @@
     <div class="op16-content">
         <%@ include file="../op-forms/ClearChargingProfileForm.jsp" %>
     </div></div>
-</div></div>
+</div></div></div></div></div>
 <%@ include file="../00-footer.jsp" %>
