@@ -2,8 +2,8 @@
 /.idea
 *.iml
 .DS_Store
-src/main/resources/application-dev.properties
-src/main/resources/application-prod.properties
-src/main/resources/application-docker.properties
-src/main/resources/application-test.properties
-src/main/resources/application-kubernetes.properties
+# src/main/resources/application-dev.properties
+# src/main/resources/application-prod.properties
+# src/main/resources/application-docker.properties
+# src/main/resources/application-test.properties
+# src/main/resources/application-kubernetes.properties
